@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65E76031-CCFD-4703-9C0A-D7CAA8D9C5D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PL.CariHesap.UI</RootNamespace>
+    <AssemblyName>PL.CariHesap.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAnasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnasayfa.Designer.cs">
+      <DependentUpon>frmAnasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCariSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCariSorgulama.Designer.cs">
+      <DependentUpon>frmCariSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKasaIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKasaIslemleri.Designer.cs">
+      <DependentUpon>frmKasaIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKategoriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKategoriler.Designer.cs">
+      <DependentUpon>frmKategoriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri.Designer.cs">
+      <DependentUpon>frmStokIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pnlHeader11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pnlHeader11.Designer.cs">
+      <DependentUpon>pnlHeader11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAnasayfa.resx">
+      <DependentUpon>frmAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCariSorgulama.resx">
+      <DependentUpon>frmCariSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKasaIslemleri.resx">
+      <DependentUpon>frmKasaIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKategoriler.resx">
+      <DependentUpon>frmKategoriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri.resx">
+      <DependentUpon>frmStokIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnlHeader11.resx">
+      <DependentUpon>pnlHeader11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL.CariHesap.Cl\BLL.CariHesap.Cl.csproj">
+      <Project>{fb71cd70-c3f4-45fe-ae0f-078adffeba1b}</Project>
+      <Name>BLL.CariHesap.Cl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL.CariHesap.Cl\DAL.CariHesap.Cl.csproj">
+      <Project>{a02f6ce2-b475-4e77-bc4d-d5cafeefb97c}</Project>
+      <Name>DAL.CariHesap.Cl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
